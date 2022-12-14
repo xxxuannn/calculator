@@ -301,7 +301,8 @@ public enum class GraphViewChangedReason
         void UpdateTracingChanged();
         void HandleTracingMovementTick(Object ^ sender, Object ^ e);
         void HandleKey(bool keyDown, Windows::System::VirtualKey key);
-
+        void Set__m_KeysPressed(bool keyDown, Windows::System::VirtualKey key);
+        int Count_pressedKeys(bool keyDown, Windows::System::VirtualKey key);
         void SetEquationsAsValid();
         void SetEquationErrors();
         std::optional<std::vector<std::shared_ptr<Graphing::IEquation>>> TryInitializeGraph(bool keepCurrentView, _In_ const Graphing::IExpression* graphingExp = nullptr);

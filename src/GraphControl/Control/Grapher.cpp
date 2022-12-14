@@ -918,10 +918,52 @@ void Grapher::OnCoreKeyDown(CoreWindow ^ sender, KeyEventArgs ^ e)
     }
 }
 
+void Grapher::Set__m_KeysPressed(bool keyDown, VirtualKey key)
+{
+    if (key == VirtualKey::Left)
+    {
+        m_KeysPressed[KeysPressedSlots::Left] = keyDown;
+    }
+    if (key == VirtualKey::Right)
+    {
+        m_KeysPressed[KeysPressedSlots::Right] = keyDown;
+    }
+    if (key == VirtualKey::Up)
+    {
+        m_KeysPressed[KeysPressedSlots::Up] = keyDown;
+    }
+    if (key == VirtualKey::Down)
+    {
+        m_KeysPressed[KeysPressedSlots::Down] = keyDown;
+    }
+    if (key == VirtualKey::Shift)
+    {
+        m_KeysPressed[KeysPressedSlots::Accelerator] = keyDown;
+    }
+}
+int Grapher::Count_pressedKeys(bool keyDown, VirtualKey key)
+{
+    int pressedKeys = 0;
+    if (keydown)
+    {
+        switch (key)
+        {
+        case VirtualKey::Left:
+        case VirtualKey::Right:
+        case VirtualKey::Up:
+        case VirtualKey::Down:
+            pressedKeys++;
+            break;
+        default:
+        }
+    }
+    return pressedKeys;
+}
+
 void Grapher::HandleKey(bool keyDown, VirtualKey key)
 {
     int pressedKeys = 0;
-    if (key == VirtualKey::Left)
+    /* if (key == VirtualKey::Left)
     {
         m_KeysPressed[KeysPressedSlots::Left] = keyDown;
         if (keyDown)
@@ -957,7 +999,8 @@ void Grapher::HandleKey(bool keyDown, VirtualKey key)
     {
         m_KeysPressed[KeysPressedSlots::Accelerator] = keyDown;
     }
-
+    */
+    Set__m_KeysPressed(keyDown, key);
     if (pressedKeys > 0 && !m_Moving)
     {
         m_Moving = true;
