@@ -98,6 +98,12 @@ namespace CalculatorApp::ViewModel::Common
                 CalculatorApp::ViewModel::Common::CategoryGroupType modeType,
                 CalculatorApp::ViewModel::Common::NumberBase programmerNumberBase,
                 CalculatorApp::ViewModel::Common::BitLength bitLengthType);
+        static CopyPasteMaxOperandLengthAndValue SetMaxLengthAndMaxValue(
+            CalculatorApp::ViewModel::Common::CopyPasteMaxOperandLengthAndValue res,
+            CalculatorApp::ViewModel::Common::ViewMode mode,
+            CalculatorApp::ViewModel::Common::CategoryGroupType modeType,
+            CalculatorApp::ViewModel::Common::NumberBase programmerNumberBase,
+            CalculatorApp::ViewModel::Common::BitLength bitLengthType);
         static CopyPasteMaxOperandLengthAndValue GetMaxOperandLengthAndValue(
             CalculatorApp::ViewModel::Common::ViewMode mode,
             CalculatorApp::ViewModel::Common::CategoryGroupType modeType,
