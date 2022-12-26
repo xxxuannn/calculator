@@ -164,6 +164,8 @@ IVector<Platform::String ^> ^ CopyPasteManager::ExtractOperands(Platform::String
     bool isPreviousOperator = false;
 
     wstring validCharacterSet;
+
+    validCharacterSet = set_validCharacterSet(mode);
     switch (mode)
     {
     case ViewMode::Standard:

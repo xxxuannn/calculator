@@ -120,4 +120,284 @@ public
         Windows::Foundation::Collections::IObservableMap<Platform::String ^, Platform::String ^> ^ m_Monotonicity;
         Windows::ApplicationModel::Resources::ResourceLoader ^ m_resourceLoader;
     };
+
+    class EvaluationErrorCode
+    {
+    private:
+        String s = L"GeneralError";
+
+    public:
+        set_S()
+        {
+            return s;
+        }
+    };
+
+    class Overflow : public EvaluationErrorCode
+    {
+    private:
+        String s = L"Overflow";
+    };
+
+    class RequireRadiansMode : public EvaluationErrorCode
+    {
+    private:
+        String s = L"RequireRadiansMode";
+    };
+
+    class RequireDegreesMode : public EvaluationErrorCode
+    {
+    private:
+        String s = L"RequireDegreesMode";
+    };
+
+    class FactorialInvalidArgument : public EvaluationErrorCode
+    {
+    private:
+        String s = L"FactorialInvalidArgument";
+    };
+
+    class Factorial2InvalidArgument : public EvaluationErrorCode
+    {
+    private:
+        String s = L"FactorialInvalidArgument";
+    };
+
+    class FactorialCannotPerformOnLargeNumber : public EvaluationErrorCode
+    {
+    private:
+        String s = L"FactorialCannotPerformOnLargeNumber";
+    };
+
+    class ModuloCannotPerformOnFloat : public EvaluationErrorCode
+    {
+    private:
+        String s = L"ModuloCannotPerformOnFloat";
+    };
+
+    class TooComplexToSolve : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class EquationTooComplexToSolve : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class EquationTooComplexToSolveSymbolic : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class EquationTooComplexToPlot : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class InequalityTooComplexToSolve : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class GE_TooComplexToSolve : public EvaluationErrorCode
+    {
+    private:
+        String s = L"TooComplexToSolve";
+    };
+
+    class EquationHasNoSolution : public EvaluationErrorCode
+    {
+    private:
+        String s = L"EquationHasNoSolution";
+    };
+
+    class InequalityHasNoSolution : public EvaluationErrorCode
+    {
+    private:
+        String s = L"EquationHasNoSolution";
+    };
+
+    class DivideByZero : public EvaluationErrorCode
+    {
+    private:
+        String s = L"DivideByZero";
+    };
+
+    class MutuallyExclusiveConditions : public EvaluationErrorCode
+    {
+    private:
+        String s = L"MutuallyExclusiveConditions";
+    };
+
+    class OutOfDomain : public EvaluationErrorCode
+    {
+    private:
+        String s = L"OutOfDomain";
+    };
+
+    class GE_NotSupported : public EvaluationErrorCode
+    {
+    private:
+        String s = L"GE_NotSupported";
+    };
+
+    class SyntaxErrorCode
+    {
+    private:
+        String s = L"GeneralError";
+
+    public:
+        set_S()
+        {
+            return s;
+        }
+    };
+
+    class ParenthesisMismatch : public SyntaxErrorCode
+    {
+    private:
+        String s = L"ParenthesisMismatch";
+    };
+    class UnmatchedParenthesis : public SyntaxErrorCode
+    {
+    private:
+        String s = L"UnmatchedParenthesis";
+    };
+    class TooManyDecimalPoints : public SyntaxErrorCode
+    {
+    private:
+        String s = L"TooManyDecimalPoints";
+    };
+    class DecimalPointWithoutDigits : public SyntaxErrorCode
+    {
+    private:
+        String s = L"DecimalPointWithoutDigits";
+    };
+    class UnexpectedEndOfExpression : public SyntaxErrorCode
+    {
+    private:
+        String s = L"UnexpectedEndOfExpression";
+    };
+    class UnexpectedToken : public SyntaxErrorCode
+    {
+    private:
+        String s = L"UnexpectedToken";
+    };
+    class InvalidToken : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidToken";
+    };
+    class TooManyEquals : public SyntaxErrorCode
+    {
+    private:
+        String s = L"TooManyEquals";
+    };
+    class EqualWithoutGraphVariable : public SyntaxErrorCode
+    {
+    private:
+        String s = L"EqualWithoutGraphVariable";
+    };
+    class InvalidEquationSyntax : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidEquationSyntax";
+    };
+    class InvalidEquationFormat : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidEquationSyntax";
+    };
+    class EmptyExpression : public SyntaxErrorCode
+    {
+    private:
+        String s = L"EmptyExpression";
+    };
+    class EqualWithoutEquation : public SyntaxErrorCode
+    {
+    private:
+        String s = L"EqualWithoutEquation";
+    };
+    class ExpectParenthesisAfterFunctionName : public SyntaxErrorCode
+    {
+    private:
+        String s = L"ExpectParenthesisAfterFunctionName";
+    };
+    class IncorrectNumParameter : public SyntaxErrorCode
+    {
+    private:
+        String s = L"IncorrectNumParameter";
+    };
+    class InvalidVariableNameFormat : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidVariableNameFormat";
+    };
+    class BracketMismatch : public SyntaxErrorCode
+    {
+    private:
+        String s = L"BracketMismatch";
+    };
+    class UnmatchedBracket : public SyntaxErrorCode
+    {
+    private:
+        String s = L"UnmatchedBracket";
+    };
+    class CannotUseIInReal : public SyntaxErrorCode
+    {
+    private:
+        String s = L"CannotUseIInReal";
+    };
+    class InvalidNumberDigit : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidNumberDigit";
+    };
+    class InvalidNumberBase : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidNumberBase";
+    };
+    class InvalidVariableSpecification : public SyntaxErrorCode
+    {
+    private:
+        String s = L"InvalidVariableSpecification";
+    };
+    class ExpectingLogicalOperands : public SyntaxErrorCode
+    {
+    private:
+        String s = L"ExpectingLogicalOperands";
+    };
+    class ExpectingScalarOperands : public SyntaxErrorCode
+    {
+    private:
+        String s = L"ExpectingLogicalOperands";
+    };
+    class CannotUseIndexVarInOpLimits : public SyntaxErrorCode
+    {
+    private:
+        String s = L"CannotUseIndexVarInOpLimits";
+    };
+    class CannotUseIndexVarInLimPoint : public SyntaxErrorCode
+    {
+    private:
+        String s = L"Overflow";
+    };
+    class CannotUseComplexInfinityInReal : public SyntaxErrorCode
+    {
+    private:
+        String s = L"CannotUseComplexInfinityInReal";
+    };
+    class CannotUseIInInequalitySolving : public SyntaxErrorCode
+    {
+    private:
+        String s = L"CannotUseIInInequalitySolving";
+    };
+
 }
